@@ -37,6 +37,6 @@ for idx, d_realized in enumerate(units_sold):
     S[idx % periodicity] = gamma*d_realized/L + (1-gamma)*seasonality #note: just overwrite old value as S is periodic!
 
 # predict next month
-prediction = (L+T)*S[-1] #l=1
+prediction = (L+T)*S[(month_goal-1) % periodicity] #l=1
 
 print(f"Prediciton for Month {month_goal}: \t{round(prediction)}")
