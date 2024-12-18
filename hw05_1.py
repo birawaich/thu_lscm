@@ -67,6 +67,3 @@ for i,m in enumerate(goal_months):
 ax.legend()
 fig.savefig("./out/hw05_1.png",format="png")
 plt.show()
-
-
-
